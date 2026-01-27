@@ -36,7 +36,7 @@
     }
 
     .message {
-      font-size: 21px; /* bigger text */
+      font-size: 21px; 
       color: #444;
       line-height: 1.8;
     }
@@ -53,7 +53,7 @@
 
     button {
       padding: 16px 35px;
-      font-size: 20px; /* bigger buttons */
+      font-size: 20px; 
       border: none;
       border-radius: 25px;
       cursor: pointer;
@@ -120,11 +120,12 @@
     </div>
 
     <div class="music">
+      <!-- Artist embed to shuffle songs like before -->
       <iframe
-        src="https://open.spotify.com/embed/track/5u7J2z73hU7s3xC2J4hXpw" 
-        width="100%" 
-        height="80" 
-        frameborder="0" 
+        src="https://open.spotify.com/embed/artist/1Xyo4u8uXC1ZmMpatF05PJ"
+        width="100%"
+        height="80"
+        frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
       </iframe>
     </div>
@@ -138,20 +139,19 @@
   <!-- Floating emojis and album covers -->
   <div class="floating" style="left:5%;">🌹</div>
   <div class="floating" style="left:12%;">💖</div>
-  <div class="floating" style="left:20%;">🌺</div>
+  <div class="floating" style="left:20%;">🌺</div> <!-- lily -->
   <div class="floating" style="left:25%;"><img src="https://upload.wikimedia.org/wikipedia/en/0/0c/The_Weeknd_-_XO.jpg" alt="XO Album"></div>
   <div class="floating" style="left:32%;">✨</div>
-  <div class="floating" style="left:40%;">🏵️</div>
+  <div class="floating" style="left:40%;">🏵️</div> <!-- lily -->
   <div class="floating" style="left:45%;"><img src="https://upload.wikimedia.org/wikipedia/en/2/21/The_Weeknd_-_After_Hours.png" alt="After Hours Album"></div>
-  <div class="floating" style="left:52%;">🌸</div>
+  <div class="floating" style="left:52%;">🌸</div> <!-- lily -->
   <div class="floating" style="left:60%;"><img src="https://upload.wikimedia.org/wikipedia/en/f/f1/The_Weeknd_-_Beauty_Behind_the_Madness.png" alt="Beauty Behind the Madness"></div>
   <div class="floating" style="left:68%;">🎵</div>
   <div class="floating" style="left:75%;">💫</div>
-  <div class="floating" style="left:82%;">🌺</div>
+  <div class="floating" style="left:82%;">🌺</div> <!-- lily -->
   <div class="floating" style="left:88%;">🌹</div>
 
   <script>
-    // Floating animation randomization
     const floatElements = document.querySelectorAll('.floating');
     floatElements.forEach(el => {
       el.style.animationDuration = (Math.random() * 15 + 10) + 's';
@@ -165,8 +165,9 @@
         <p>I’m looking forward to what’s next with you. Happy Valentine’s!</p>
         <p>— Jeph</p>
       `;
+      // Keep the artist music embed so it continues playing
       const music = document.createElement('iframe');
-      music.src = "https://open.spotify.com/embed/track/5u7J2z73hU7s3xC2J4hXpw";
+      music.src = "https://open.spotify.com/embed/artist/1Xyo4u8uXC1ZmMpatF05PJ";
       music.width = "100%";
       music.height = "80";
       music.frameBorder = "0";
