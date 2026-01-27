@@ -12,18 +12,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* Pink gradient background */
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     }
 
     .card {
       background: rgba(255, 255, 255, 0.95);
-      padding: 50px 35px;
-      border-radius: 30px;
-      box-shadow: 0 12px 50px rgba(0,0,0,0.35);
-      width: 95%;
-      max-width: 650px; 
-      max-height: 95vh; 
+      padding: 60px 40px;
+      border-radius: 35px;
+      box-shadow: 0 15px 60px rgba(0,0,0,0.35);
+      width: 98%;
+      max-width: 700px; 
+      max-height: 97vh; 
       text-align: center;
       z-index: 10;
       position: relative;
@@ -32,29 +31,29 @@
 
     h1 {
       color: #ff4d6d;
-      font-size: 30px; 
-      margin-bottom: 25px;
+      font-size: 34px; 
+      margin-bottom: 30px;
     }
 
     .message {
-      font-size: 19px; 
+      font-size: 21px; /* bigger text */
       color: #444;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .music {
-      margin-top: 30px;
+      margin-top: 35px;
     }
 
     .buttons {
-      margin-top: 35px;
+      margin-top: 40px;
       position: relative;
       height: 100px;
     }
 
     button {
-      padding: 14px 30px;
-      font-size: 18px; 
+      padding: 16px 35px;
+      font-size: 20px; /* bigger buttons */
       border: none;
       border-radius: 25px;
       cursor: pointer;
@@ -75,7 +74,7 @@
     /* Floating emojis and album covers */
     .floating {
       position: absolute;
-      font-size: 95px; /* updated to 95px */
+      font-size: 95px; 
       animation: float linear infinite;
       pointer-events: none;
     }
@@ -122,10 +121,10 @@
 
     <div class="music">
       <iframe
-        src="https://open.spotify.com/embed/artist/1Xyo4u8uXC1ZmMpatF05PJ"
-        width="100%"
-        height="80"
-        frameborder="0"
+        src="https://open.spotify.com/embed/track/5u7J2z73hU7s3xC2J4hXpw" 
+        width="100%" 
+        height="80" 
+        frameborder="0" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
       </iframe>
     </div>
@@ -139,20 +138,20 @@
   <!-- Floating emojis and album covers -->
   <div class="floating" style="left:5%;">🌹</div>
   <div class="floating" style="left:12%;">💖</div>
-  <div class="floating" style="left:20%;">🌺</div> <!-- lily -->
+  <div class="floating" style="left:20%;">🌺</div>
   <div class="floating" style="left:25%;"><img src="https://upload.wikimedia.org/wikipedia/en/0/0c/The_Weeknd_-_XO.jpg" alt="XO Album"></div>
   <div class="floating" style="left:32%;">✨</div>
-  <div class="floating" style="left:40%;">🏵️</div> <!-- lily -->
+  <div class="floating" style="left:40%;">🏵️</div>
   <div class="floating" style="left:45%;"><img src="https://upload.wikimedia.org/wikipedia/en/2/21/The_Weeknd_-_After_Hours.png" alt="After Hours Album"></div>
-  <div class="floating" style="left:52%;">🌸</div> <!-- lily -->
+  <div class="floating" style="left:52%;">🌸</div>
   <div class="floating" style="left:60%;"><img src="https://upload.wikimedia.org/wikipedia/en/f/f1/The_Weeknd_-_Beauty_Behind_the_Madness.png" alt="Beauty Behind the Madness"></div>
   <div class="floating" style="left:68%;">🎵</div>
   <div class="floating" style="left:75%;">💫</div>
-  <div class="floating" style="left:82%;">🌺</div> <!-- lily -->
+  <div class="floating" style="left:82%;">🌺</div>
   <div class="floating" style="left:88%;">🌹</div>
 
   <script>
-    // Animate floating elements with random speed and delay
+    // Floating animation randomization
     const floatElements = document.querySelectorAll('.floating');
     floatElements.forEach(el => {
       el.style.animationDuration = (Math.random() * 15 + 10) + 's';
@@ -167,7 +166,7 @@
         <p>— Jeph</p>
       `;
       const music = document.createElement('iframe');
-      music.src = "https://open.spotify.com/embed/artist/1Xyo4u8uXC1ZmMpatF05PJ";
+      music.src = "https://open.spotify.com/embed/track/5u7J2z73hU7s3xC2J4hXpw";
       music.width = "100%";
       music.height = "80";
       music.frameBorder = "0";
@@ -181,7 +180,7 @@
       const maxY = window.innerHeight - noBtn.offsetHeight - 20;
       const x = Math.random() * maxX;
       const y = Math.random() * maxY;
-      noBtn.style.position = 'absolute';
+      noBtn.style.position = 'fixed';
       noBtn.style.left = x + 'px';
       noBtn.style.top = y + 'px';
     }
