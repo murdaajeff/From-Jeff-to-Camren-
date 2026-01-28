@@ -21,22 +21,22 @@
       border-radius: 35px;
       box-shadow: 0 15px 60px rgba(0,0,0,0.35);
       width: 98%;
-      max-width: 700px; 
-      max-height: 97vh; 
+      max-width: 700px;
+      max-height: 97vh;
       text-align: center;
       z-index: 10;
       position: relative;
-      overflow-y: auto; 
+      overflow-y: auto;
     }
 
     h1 {
       color: #ff4d6d;
-      font-size: 34px; 
+      font-size: 34px;
       margin-bottom: 30px;
     }
 
     .message {
-      font-size: 21px; 
+      font-size: 21px;
       color: #444;
       line-height: 1.8;
     }
@@ -53,7 +53,7 @@
 
     button {
       padding: 16px 35px;
-      font-size: 20px; 
+      font-size: 20px;
       border: none;
       border-radius: 25px;
       cursor: pointer;
@@ -74,13 +74,13 @@
     /* Floating emojis and album covers */
     .floating {
       position: absolute;
-      font-size: 95px; 
+      font-size: 95px;
       animation: float linear infinite;
       pointer-events: none;
     }
 
     .floating img {
-      width: 120px;  
+      width: 120px;
       height: 120px;
       border-radius: 10px;
     }
@@ -120,11 +120,11 @@
     </div>
 
     <div class="music">
-      <!-- Artist embed to shuffle songs like before -->
+      <!-- Correct Spotify embed for The Weeknd artist (shuffle/listenable) -->
       <iframe
         src="https://open.spotify.com/embed/artist/1Xyo4u8uXC1ZmMpatF05PJ"
         width="100%"
-        height="80"
+        height="90"
         frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
       </iframe>
@@ -136,25 +136,25 @@
     </div>
   </div>
 
-  <!-- Floating emojis and album covers -->
+  <!-- Floating emojis & album covers -->
   <div class="floating" style="left:5%;">🌹</div>
   <div class="floating" style="left:12%;">💖</div>
-  <div class="floating" style="left:20%;">🌺</div> <!-- lily -->
+  <div class="floating" style="left:20%;">🌺</div>
   <div class="floating" style="left:25%;"><img src="https://upload.wikimedia.org/wikipedia/en/0/0c/The_Weeknd_-_XO.jpg" alt="XO Album"></div>
   <div class="floating" style="left:32%;">✨</div>
-  <div class="floating" style="left:40%;">🏵️</div> <!-- lily -->
+  <div class="floating" style="left:40%;">🏵️</div>
   <div class="floating" style="left:45%;"><img src="https://upload.wikimedia.org/wikipedia/en/2/21/The_Weeknd_-_After_Hours.png" alt="After Hours Album"></div>
-  <div class="floating" style="left:52%;">🌸</div> <!-- lily -->
+  <div class="floating" style="left:52%;">🌸</div>
   <div class="floating" style="left:60%;"><img src="https://upload.wikimedia.org/wikipedia/en/f/f1/The_Weeknd_-_Beauty_Behind_the_Madness.png" alt="Beauty Behind the Madness"></div>
   <div class="floating" style="left:68%;">🎵</div>
   <div class="floating" style="left:75%;">💫</div>
-  <div class="floating" style="left:82%;">🌺</div> <!-- lily -->
+  <div class="floating" style="left:82%;">🌺</div>
   <div class="floating" style="left:88%;">🌹</div>
 
   <script>
     const floatElements = document.querySelectorAll('.floating');
     floatElements.forEach(el => {
-      el.style.animationDuration = (Math.random() * 15 + 10) + 's';
+      el.style.animationDuration = (Math.random() * 15 + 8) + 's';
       el.style.animationDelay = Math.random() * 5 + 's';
     });
 
@@ -165,11 +165,10 @@
         <p>I’m looking forward to what’s next with you. Happy Valentine’s!</p>
         <p>— Jeph</p>
       `;
-      // Keep the artist music embed so it continues playing
       const music = document.createElement('iframe');
       music.src = "https://open.spotify.com/embed/artist/1Xyo4u8uXC1ZmMpatF05PJ";
       music.width = "100%";
-      music.height = "80";
+      music.height = "90";
       music.frameBorder = "0";
       music.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
       card.appendChild(music);
